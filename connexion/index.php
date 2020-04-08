@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Connection - Davy</title>
+        <title>Connexion - Davy</title>
     </head>
     
     <body>
