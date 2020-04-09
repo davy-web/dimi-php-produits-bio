@@ -1,3 +1,36 @@
+<?php
+$error = "";
+$bouton_connexion = "Se déconnecter";
+
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+if ($_POST) {
+    if (isset($_SESSION['connect'])) {
+        unset($_SESSION['connect']);
+        session_destroy();
+    }
+    header('Location: ../connexion/index.php');
+    exit();
+}
+
+if (isset($_SESSION['connect'])) {
+    if ($_SESSION['connect'] == "connect") {
+        $bouton_connexion = "Se déconnecter";
+        $error = "Vous êtes connecté";
+    }
+    else {
+        $bouton_connexion = "Se connecter";
+        $error = "Vous êtes déconnecté";
+    }
+}
+else {
+    $bouton_connexion = "Se connecter";
+    $error = "Vous êtes déconnecté";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     
@@ -9,33 +42,9 @@
     
     <body>
         <form method="POST" action="">
-            <input type="submit" name="deconnecter" value="Se déconnecter"><br>
+            <input type="submit" name="connexion" value="<?php echo($bouton_connexion); ?>"><br>
+            <p><?php echo($error); ?></p>
         </form>
         
-        <?php
-        if (!isset($_SESSION)) {
-            session_start();
-        }
-        
-        if($_POST) {
-            if (isset($_SESSION['connect'])) {
-                unset($_SESSION['connect']);
-                session_destroy();
-            }
-        }
-        
-        if (isset($_SESSION['connect'])) {
-            if ($_SESSION['connect'] == "connect") {
-                echo("Vous êtes connecté");
-            }
-            else {
-                echo("Vous êtes déconnecté");
-            }
-        }
-        else {
-            echo("Vous êtes déconnecté");
-        }
-        
-        ?>
     </body>
 </html>

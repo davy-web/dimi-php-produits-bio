@@ -1,3 +1,36 @@
+<?php
+$error = "";
+
+if($_POST) {
+    $pdo = new PDO('mysql:host=localhost;dbname=davy_admin', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+    $result = $pdo->prepare('SELECT * FROM davy_users WHERE login = :login');
+    $result->execute(array(
+        'login' => $_POST['login']
+    ));
+    $ErrorCo = true;
+    
+    if (!empty($_POST['login'])) {
+        while($users = $result->fetch(PDO::FETCH_ASSOC)){
+            if (($_POST['login'] == "chendavyweb@gmail.com") && ($_POST['login'] == $users["login"]) && (password_verify($_POST['password'], $users["password"]))) {
+                if (!isset($_SESSION)) {
+                    session_start();
+                }
+                $_SESSION['connect'] = "connect";
+                $ErrorCo = false;
+                header('Location: ../admin/index.php');
+                exit();
+            }
+        }
+        if ($ErrorCo == true) {
+            $error = "Le mot de passe ou l'identifiant est faux";
+        }
+    }
+    else {
+        $error = "Veuillez remplir tous les champs";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     
@@ -16,36 +49,8 @@
             <input type="password" id="password" name="password"><br><br>
             
             <input type="submit" name="connecter" value="Se connecter"><br>
+            <p><?php echo($error); ?></p>
         </form>
         
-        <?php
-        if($_POST) {
-            $pdo = new PDO('mysql:host=localhost;dbname=davy_admin', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
-            $result = $pdo->prepare('SELECT * FROM davy_users WHERE login = :login');
-            $result->execute(array(
-                'login' => $_POST['login']
-            ));
-            
-            $ErrorCo = true;
-            if (!empty($_POST['login'])) {
-                while($users = $result->fetch(PDO::FETCH_ASSOC)){
-                    if (($_POST['login'] == $users["login"]) && (password_verify($_POST['password'], $users["password"]))) {
-                        echo("Bienvenue!");
-                        if (!isset($_SESSION)) {
-                            session_start();
-                        }
-                        $_SESSION['connect'] = "connect";
-                        $ErrorCo = false;
-                    }
-                }
-                if ($ErrorCo == true) {
-                    echo("Le mot de passe ou l'identifiant est faux");
-                }
-            }
-            else {
-                echo("Le login doit être une adresse e-mail");
-            }
-        }
-        ?>
     </body>
 </html>
