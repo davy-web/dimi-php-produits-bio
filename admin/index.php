@@ -11,7 +11,7 @@ if ($_POST) {
         unset($_SESSION['connect']);
         session_destroy();
     }
-    header('Location: ../connexion/index.php');
+    header('Location: ../connexion/');
     exit();
 }
 
@@ -30,10 +30,8 @@ else {
     $error = "Vous êtes déconnecté";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
-    
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
