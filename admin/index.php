@@ -42,7 +42,7 @@ else {
 <?php
 if (isset($_SESSION['connect'])) {
     if ($_SESSION['connect'] == "connect") {
-        include '../add-produits/index.php';
+        include 'add-produits.php';
     }
 }
 ?>
