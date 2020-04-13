@@ -1,12 +1,11 @@
 <?php
-$error = "";
 $bouton_connexion = "Se déconnecter";
 
 if (!isset($_SESSION)) {
     session_start();
 }
 
-if ($_POST) {
+if (isset($_POST['connexion'])) {
     if (isset($_SESSION['connect'])) {
         unset($_SESSION['connect']);
         session_destroy();
@@ -18,16 +17,13 @@ if ($_POST) {
 if (isset($_SESSION['connect'])) {
     if ($_SESSION['connect'] == "connect") {
         $bouton_connexion = "Se déconnecter";
-        $error = "Vous êtes connecté";
     }
     else {
         $bouton_connexion = "Se connecter";
-        $error = "Vous êtes déconnecté";
     }
 }
 else {
     $bouton_connexion = "Se connecter";
-    $error = "Vous êtes déconnecté";
 }
 ?>
 <!DOCTYPE html>
@@ -41,8 +37,15 @@ else {
     <body>
         <form method="POST" action="">
             <input type="submit" name="connexion" value="<?php echo($bouton_connexion); ?>"><br>
-            <p><?php echo($error); ?></p>
         </form>
-        
+
+<?php
+if (isset($_SESSION['connect'])) {
+    if ($_SESSION['connect'] == "connect") {
+        include '../add-produits/index.php';
+    }
+}
+?>
+
     </body>
 </html>

@@ -44,6 +44,9 @@ if($_POST) {
             $error = "Le login doit être une adresse e-mail";
         }
     }
+    else {
+        $error = "Veuillez remplir tous les champs";
+    }
 }
 ?>
 <!DOCTYPE html>
