@@ -1,0 +1,75 @@
+/* 
+
+--- Auteur ---
+Davy CHEN
+
+--- Date ---
+18/04/2020
+
+--- Notation ---
+[style.css]
+.name_name
+#name_name
+
+[bootstrap.css]
+.name-name
+#name-name
+
+--- Sommaire ---
+1 - Fonts
+2 - Couleurs
+3 - Size
+4 - Background
+
+*/
+
+
+/* --- 1 - Fonts --- */
+.font_hotel {
+    font-family: 'Grand Hotel', cursive;
+}
+
+/* --- 2 - Couleurs --- */
+body {
+    color: #333333;
+}
+.bouton_green {
+    color: #333333;
+    background-color: #99cc66;
+    border: 1px solid #99cc66;
+}
+.bouton_green:hover {
+    color: #99cc66;
+    background-color: inherit;
+}
+.color_green {
+    color: #99cc66;
+}
+.color_white {
+    color: white;
+}
+
+/* --- 3 - Size --- */
+h1 {
+    font-size: 100px;
+}
+p {
+    font-size: 25px;
+}
+
+/* --- 4 - Background --- */
+.fond_noir_1 {
+    background-image: url(../images/fond-noir-1.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fond_noir_2 {
+    background-image: url(../images/fond-noir-2.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fond_noir {
+    background-color: #303030;
+}
