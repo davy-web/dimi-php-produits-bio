@@ -1,15 +1,43 @@
 <?php
+$pdo = new PDO('mysql:host=localhost;dbname=davy_admin', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+?>
+<?php
 $title_page = "Accueil - Produits Bio";
 include 'header.php';
 ?>
 
         <!-- Meilleures Ventes -->
-        <div class="container">
+        <div class="container mt-5">
             <h1 class="font_hotel text-center">Meilleures Ventes</h1>
             <p class="text-center">Et quadam quadam per incursare sollicite repperisset finitimis bellis sollicite ordinatus ferocissimas e usquam repperisset incessunt per explorabat moventem finitimis.</p>
         </div>
 
         <!-- 3 Produits -->
+        <div class="container my-5">
+            <div class="row my-5">
+            <?php
+            for ($i=1; $i<=3; $i++) {
+                $result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
+                $result->execute(array(
+                    'id' => $i
+                ));
+                while($produit = $result->fetch(PDO::FETCH_ASSOC)){
+                    $nom = $produit["nom"];
+                    $photo = $produit["photo"];
+                    $prix = $produit["prix"];
+                }
+                echo '
+                <div class="col-lg text-center my-5">';
+                echo '
+                    <img src="' . $photo . '" alt="produits bio" class="img-fluid rounded-circle">';
+                echo '
+                    <h2 class="font_hotel">' . $nom . '</h2>';
+                echo '
+                    <p>' . $prix . ' €</p>';
+                echo '
+                </div>';
+            }?></div>
+        </div>
 
         <!-- Fruits Bio -->
         <div class="container-fluid fond_noir_1 pt-5">

@@ -23,6 +23,9 @@ Davy CHEN
 
 */
 
+body {
+    margin: 0px;
+}
 
 /* --- 1 - Fonts --- */
 .font_hotel {
@@ -48,16 +51,30 @@ body {
 .color_white {
     color: white;
 }
+.bg_dark {
+    background-color: #303030;
+    opacity: 0.6;
+}
+a:hover {
+    color: #99cc66;
+}
 
 /* --- 3 - Size --- */
 h1 {
-    font-size: 100px;
+    font-size: 70px;
 }
 p {
     font-size: 25px;
 }
 
 /* --- 4 - Background --- */
+.fond_header {
+    background-image: url(../images/header.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
 .fond_noir_1 {
     background-image: url(../images/fond-noir-1.png);
     background-position: top center;
