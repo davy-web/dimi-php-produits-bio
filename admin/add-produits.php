@@ -1,9 +1,9 @@
 <?php
 $error = "";
+include '../config.php';
 
 if (isset($_POST['enregistrer'])) {
     if (!empty($_POST['nom'])) {
-        $pdo = new PDO('mysql:host=localhost;dbname=davy_admin', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $result = $pdo->prepare('INSERT INTO davy_produits (nom, photo, description, prix, categorie, origine, date, poids) VALUES (:nom, :photo, :description, :prix, :categorie, :origine, :date, :poids)');
         $result->execute(array(
             'nom' => $_POST['nom'],

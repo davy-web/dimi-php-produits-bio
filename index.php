@@ -1,7 +1,5 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=davy_admin', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
-?>
-<?php
+include 'config.php';
 $title_page = "Accueil - Produits Bio";
 include 'header.php';
 ?>

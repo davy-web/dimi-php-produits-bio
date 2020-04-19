@@ -1,8 +1,8 @@
 <?php
 $error = "";
+include '../config.php';
 
 if($_POST) {
-    $pdo = new PDO('mysql:host=localhost;dbname=davy_admin;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
     $result = $pdo->prepare('SELECT * FROM davy_users WHERE login = :login');
     $result->execute(array(
         'login' => $_POST['login']
