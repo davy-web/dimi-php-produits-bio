@@ -66,6 +66,15 @@ h1 {
 p {
     font-size: 25px;
 }
+.size_l {
+    font-size: 50px;
+}
+.size_m {
+    font-size: 20px;
+}
+.size_s {
+    font-size: 1rem;
+}
 
 /* --- 4 - Background --- */
 .fond_header {
@@ -89,4 +98,7 @@ p {
 }
 .fond_noir {
     background-color: #303030;
+}
+.fond_noir2 {
+    background-color: #232323;
 }

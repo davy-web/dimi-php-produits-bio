@@ -1,6 +1,7 @@
 <?php
 include 'config.php';
 $title_page = "Accueil - Produits Bio";
+$chemin_page = "./";
 include 'header.php';
 ?>
 
@@ -15,23 +16,17 @@ include 'header.php';
             <div class="row my-5">
             <?php
             for ($i=1; $i<=3; $i++) {
-                $result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
-                $result->execute(array(
-                    'id' => $i
-                ));
-                while($produit = $result->fetch(PDO::FETCH_ASSOC)){
-                    $nom = $produit["nom"];
-                    $photo = $produit["photo"];
-                    $prix = $produit["prix"];
-                }
+                $result = $pdo->query("SELECT * FROM davy_produits WHERE 1 order by rand()");
+                $produit = $result->fetch(PDO::FETCH_ASSOC);
                 echo '
                 <div class="col-lg text-center my-5">';
                 echo '
-                    <img src="' . $photo . '" alt="produits bio" class="img-fluid rounded-circle">';
+                    <img src="' . $produit["photo"] . '" alt="produits bio" class="img-fluid rounded-circle">';
                 echo '
-                    <h2 class="font_hotel">' . $nom . '</h2>';
+                    <h2 class="font_hotel">' . $produit["nom"] . '</h2>';
                 echo '
-                    <p>' . $prix . ' €</p>';
+                    <p>' . $produit["prix"] . ' €</p>';
+                echo '<a href="../produit/index.php?id=' . $produit['id'] . '" class="color_green">Voir</a>';
                 echo '
                 </div>';
             }?></div>
@@ -59,6 +54,26 @@ include 'header.php';
                 <h1 class="font_hotel text-center color_green">Ce qu'en disent nos clients :</h1>
                 <p class="text-center color_white">Et quadam quadam per incursare sollicite repperisset finitimis bellis sollicite ordinatus ferocissimas e usquam repperisset incessunt per explorabat moventem finitimis.</p>
             </div>
+            <div class="container text-center py-5">
+                <div class="row text-center">
+                    <div class="col-md py-2">
+                        <span class="color_green size_l">4,5/5</span>
+                        <p class="color_white size_m">GOOGLE</p>
+                    </div>
+                    <div class="col-md py-2">
+                        <span class="color_green size_l">4,8/5</span>
+                        <p class="color_white size_m">FACEBOOK</p>
+                    </div>
+                    <div class="col-md py-2">
+                        <span class="color_green size_l">5/5</span>
+                        <p class="color_white size_m">PAGES JAUNES</p>
+                    </div>
+                    <div class="col-md py-2">
+                        <span class="color_green size_l">4,5/5</span>
+                        <p class="color_white size_m">APPLI</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Légumes Bio -->
@@ -75,6 +90,12 @@ include 'header.php';
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Davy Chen -->
+        <div class="container my-5">
+            <p class="text-center">Gallus Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis.</p>
+            <h2 class="font_hotel text-center size_l mb_5">Davy Chen</h2>
         </div>
 
 <?php
