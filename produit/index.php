@@ -1,17 +1,21 @@
 <?php
 include '../config.php';
-$title_page = "Produits - Produits Bio";
-$result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
-$result->execute(array(
-    'id' => $_GET['id']
-));
-$produit = $result->fetch(PDO::FETCH_ASSOC);
-$title_header = $produit["nom"];
+$title_page = "Produit - Produits Bio";
+$title_header = "Produit";
+if(!empty($_GET['id'])) {
+    $result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
+    $result->execute(array(
+        'id' => $_GET['id']
+    ));
+    $produit = $result->fetch(PDO::FETCH_ASSOC);
+    $title_page = $produit["nom"] . " - Produits Bio";
+    $title_header = $produit["nom"];
+}
 $chemin_page = "../";
 include '../header2.php';
 ?>
 
-        <!-- Produits -->
+        <!-- Produit -->
         <div class="container my-5">
             <div class="row my-5">
             <?php

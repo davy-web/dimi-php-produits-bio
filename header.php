@@ -16,7 +16,7 @@
         <header>
             <nav class="navbar fixed-top bg_dark">
                 <div class="container">
-                    <a class="navbar-brand" href="<?php echo $chemin_page; ?>index.php">
+                    <a class="navbar-brand" href="<?php echo $chemin_page; ?>">
                         <img src="<?php echo $chemin_page; ?>images/logo.png" height="60" alt="logo">
                     </a>
                     <div class="navbar-brand">

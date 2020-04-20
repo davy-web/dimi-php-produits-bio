@@ -45,6 +45,14 @@ body {
     color: #99cc66;
     background-color: inherit;
 }
+.bouton_noir {
+    color: #333333;
+    background-color: inherit;
+    border: 0px solid inherit;
+}
+.bouton_noir:hover {
+    color: white;
+}
 .color_green {
     color: #99cc66;
 }
@@ -83,6 +91,9 @@ p {
 .size_s {
     font-size: 1rem;
 }
+.input {
+    width: 100%;
+}
 
 /* --- 4 - Background --- */
 .fond_header {
@@ -115,4 +126,7 @@ p {
 }
 .fond_noir2 {
     background-color: #232323;
+}
+.fond_green {
+    background-color: #99cc66;
 }
