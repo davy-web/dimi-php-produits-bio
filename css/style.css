@@ -51,12 +51,20 @@ body {
 .color_white {
     color: white;
 }
+.color_red {
+    color: red;
+}
 .bg_dark {
     background-color: #303030;
     opacity: 0.6;
 }
 a:hover {
     color: #99cc66;
+}
+.border_input {
+    border: 1px solid #303030;
+    border-radius: 10px;
+    padding: 8px 12px;
 }
 
 /* --- 3 - Size --- */
@@ -93,6 +101,12 @@ p {
 .fond_noir_2 {
     background-image: url(../images/fond-noir-2.png);
     background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fond_noir_0 {
+    background-image: url(../images/fond-noir-0.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }

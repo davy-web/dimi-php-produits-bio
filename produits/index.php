@@ -1,13 +1,13 @@
 <?php
 include '../config.php';
 $title_page = "Produits - Produits Bio";
+$title_header = "Nos Produits";
 $chemin_page = "../";
-include '../header.php';
+include '../header2.php';
 ?>
 
-        <!-- Nos produits-->
+        <!-- Nos produits -->
         <div class="container mt-5">
-            <h1 class="font_hotel text-center">Nos produits</h1>
             <p class="text-center">Et quadam quadam per incursare sollicite repperisset finitimis bellis sollicite ordinatus ferocissimas e usquam repperisset incessunt per explorabat moventem finitimis.</p>
         </div>
 

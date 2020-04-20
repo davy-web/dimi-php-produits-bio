@@ -30,25 +30,27 @@ if($_POST) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Connexion - Davy</title>
-    </head>
-    
-    <body>
-        <form method="POST" action="">
-            <label for="login">Login (E-mail)</label><br>
-            <input type="text" id="login" name="login"><br><br>
-            
-            <label for="password">Password</label><br>
-            <input type="password" id="password" name="password"><br><br>
-            
-            <input type="submit" name="connecter" value="Se connecter"><br>
-            <p><?php echo($error); ?></p>
-        </form>
+<?php
+$title_page = "Connexion - Produits Bio";
+$title_header = "Connexion";
+$chemin_page = "../";
+include '../header2.php';
+?>
+
+        <!-- Connexion -->
+        <div class="container text-center mt-5">
+            <form method="POST" action="">
+                <label for="login">Login (E-mail)</label><br>
+                <input type="text" id="login" name="login" class="border_input"><br><br>
+
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" class="border_input"><br><br>
+
+                <input type="submit" name="connecter" value="Se connecter" class="btn bouton_green color_white"><br>
+                <p class="color_red size_s py-5"><?php echo($error); ?></p>
+            </form>
+        </div>
         
-    </body>
-</html>
+<?php
+include '../footer.php';
+?>

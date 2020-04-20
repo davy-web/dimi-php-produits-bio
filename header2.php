@@ -27,15 +27,11 @@
                     </div>
                 </div>
             </nav>
-            <div class="container-fluid fond_header">
+            <div class="container-fluid fond_noir_0" style="height: 45vh;">
                 <div class="container pt-5">
                     <div class="row pt-5">
-                        <div class="col-lg-5 align-self-stretch pt-5">
-                        </div>
-                        <div class="col-lg-7 color_white align-self-center pt-5">
+                        <div class="col-lg color_white align-self-center text-center pt-5">
                             <h1 class="font_hotel color_green"><?php echo $title_header; ?></h1>
-                            <p>Apud ipse sui vicensimo et Rufini interitu inmaturo quadriennio imperasset.</p>
-                            <button type="button" class="btn bouton_green">COMMANDER</button>
                         </div>
                     </div>
                 </div>

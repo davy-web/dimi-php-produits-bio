@@ -1,8 +1,14 @@
 <?php
 include '../config.php';
 $title_page = "Produits - Produits Bio";
+$result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
+$result->execute(array(
+    'id' => $_GET['id']
+));
+$produit = $result->fetch(PDO::FETCH_ASSOC);
+$title_header = $produit["nom"];
 $chemin_page = "../";
-include '../header.php';
+include '../header2.php';
 ?>
 
         <!-- Produits -->

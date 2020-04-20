@@ -1,6 +1,7 @@
 <?php
 include 'config.php';
 $title_page = "Accueil - Produits Bio";
+$title_header = "Produits frais bio";
 $chemin_page = "./";
 include 'header.php';
 ?>
@@ -26,7 +27,7 @@ include 'header.php';
                     <h2 class="font_hotel">' . $produit["nom"] . '</h2>';
                 echo '
                     <p>' . $produit["prix"] . ' €</p>';
-                echo '<a href="../produit/index.php?id=' . $produit['id'] . '" class="color_green">Voir</a>';
+                echo '<a href="produit/index.php?id=' . $produit['id'] . '" class="color_green">Voir</a>';
                 echo '
                 </div>';
             }?></div>
