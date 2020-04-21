@@ -1,6 +1,5 @@
 <?php
 $error = "";
-include '../config.php';
 
 if (isset($_POST['enregistrer'])) {
     if (!empty($_POST['nom'])) {
@@ -15,7 +14,7 @@ if (isset($_POST['enregistrer'])) {
             'date' => $_POST['date'],
             'poids' => $_POST['poids']
         ));
-        $error = "Le produit $_POST[nom] a été Enregister !";
+        $error = "Le produit " . $_POST['nom'] . " a été Enregister !";
     }
     else {
         $error = "Veuillez remplir tous les champs";

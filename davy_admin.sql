@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 19 avr. 2020 à 01:00
+-- Généré le :  mar. 21 avr. 2020 à 03:35
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `davy_admin`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `davy_messages`
+--
+
+CREATE TABLE `davy_messages` (
+  `id` bigint(20) NOT NULL,
+  `nom` varchar(255) DEFAULT NULL,
+  `mail` varchar(255) DEFAULT NULL,
+  `sujet` varchar(255) DEFAULT NULL,
+  `message` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `davy_messages`
+--
+
+INSERT INTO `davy_messages` (`id`, `nom`, `mail`, `sujet`, `message`) VALUES
+(1, 'nom', 'mail@mail.com', 'sujet', 'message');
 
 -- --------------------------------------------------------
 
@@ -73,6 +94,12 @@ INSERT INTO `davy_users` (`id`, `login`, `password`) VALUES
 --
 
 --
+-- Index pour la table `davy_messages`
+--
+ALTER TABLE `davy_messages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `davy_produits`
 --
 ALTER TABLE `davy_produits`
@@ -89,10 +116,16 @@ ALTER TABLE `davy_users`
 --
 
 --
+-- AUTO_INCREMENT pour la table `davy_messages`
+--
+ALTER TABLE `davy_messages`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT pour la table `davy_produits`
 --
 ALTER TABLE `davy_produits`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `davy_users`

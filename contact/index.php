@@ -27,5 +27,9 @@ include '../header2.php';
         </div>
 
 <?php
+include 'send-message.php';
+?>
+
+<?php
 include '../footer.php';
 ?>

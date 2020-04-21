@@ -11,6 +11,7 @@ include '../config.php';
                 <p class="col-sm size_s fond_noir2 m-0 p-3">Poids</p>
                 <p class="col-sm size_s fond_noir m-0 p-3">Prix</p>
                 <p class="col-sm size_s fond_noir2 m-0 p-3">Voir</p>
+                <p class="col-sm size_s fond_noir m-0 p-3">Supprimer</p>
             </div>
             <?php
             $result = $pdo->query("SELECT * FROM davy_produits");
@@ -27,6 +28,15 @@ include '../config.php';
                     <p class="col-sm size_s fond_noir m-0 p-3">' . $produit["prix"] . ' €</p>';
                 echo '<a href="../produit/index.php?id=' . $produit['id'] . '" class="color_white col-sm size_s fond_noir2 m-0 p-3">Voir</a>';
                 echo '
+                    <a href="?delete=' . $produit["id"] . '" class="color_white col-sm size_s fond_noir m-0 p-3">Supprimer</a>';
+                echo '
                 </div>';
+                if(!empty($_GET['delete'])) {
+                    $result2 = $pdo->prepare('DELETE FROM davy_produits WHERE id = :id');
+                    $result2->execute(array(
+                        'id' => $_GET['delete']
+                    ));
+                    header('Location: .');
+                }
             }?>
         </div>
