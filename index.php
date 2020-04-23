@@ -57,19 +57,35 @@ include 'header.php';
             <div class="container text-center py-5">
                 <div class="row text-center">
                     <div class="col-md py-2">
-                        <span class="color_green size_l">4,5/5</span>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star_half</i>
                         <p class="color_white size_m">GOOGLE</p>
                     </div>
                     <div class="col-md py-2">
-                        <span class="color_green size_l">4,8/5</span>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star_border</i>
                         <p class="color_white size_m">FACEBOOK</p>
                     </div>
                     <div class="col-md py-2">
-                        <span class="color_green size_l">5/5</span>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
                         <p class="color_white size_m">PAGES JAUNES</p>
                     </div>
                     <div class="col-md py-2">
-                        <span class="color_green size_l">4,5/5</span>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star</i>
+                        <i class="material-icons color_green">star_half</i>
                         <p class="color_white size_m">APPLI</p>
                     </div>
                 </div>

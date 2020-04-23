@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>images/icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>css/style.css">
     </head>
@@ -36,5 +37,6 @@
                     </div>
                 </div>
             </div>
+            <button onclick="top_scroll()" id="top_button" title="Top"><i class="material-icons">arrow_upward</i></button>
         </header>
         

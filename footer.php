@@ -43,5 +43,7 @@
                 </div>
             </div>
         </footer>
+        
+        <script src="<?php echo $chemin_page; ?>js/script.js"></script>
     </body>
 </html>
