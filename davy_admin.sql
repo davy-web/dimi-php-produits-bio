@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 21 avr. 2020 à 03:35
+-- Généré le :  jeu. 23 avr. 2020 à 20:35
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -66,9 +66,9 @@ CREATE TABLE `davy_produits` (
 --
 
 INSERT INTO `davy_produits` (`id`, `nom`, `photo`, `description`, `prix`, `categorie`, `origine`, `date`, `poids`) VALUES
-(1, 'Kiwi vert piece Calibre 36 Bio', 'images/kiwi.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'fruit', 'france', '2020-04-14', 125),
-(2, 'Myrtille barguette 125G Bio', 'images/myrtille.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 2.99, 'fruit', 'france', '2020-04-14', 125),
-(3, 'Brocoli 500G Bio', 'images/brocoli.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'france', '2020-04-14', 500);
+(1, 'Kiwi vert piece Calibre 36 Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/k/i/kiwi.4-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'fruit', 'france', '2020-04-14', 125),
+(2, 'Myrtille barguette 125G Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/m/y/myrtille-0003.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 2.99, 'fruit', 'france', '2020-04-14', 125),
+(3, 'Brocoli 500G Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/b/r/brocoli-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'france', '2020-04-14', 500);
 
 -- --------------------------------------------------------
 

@@ -16,9 +16,8 @@ include 'header.php';
         <div class="container my-5">
             <div class="row my-5">
             <?php
-            for ($i=1; $i<=3; $i++) {
-                $result = $pdo->query("SELECT * FROM davy_produits WHERE 1 order by rand()");
-                $produit = $result->fetch(PDO::FETCH_ASSOC);
+            $result = $pdo->query("SELECT * FROM davy_produits WHERE 4 order by rand()");
+            while($produit = $result->fetch(PDO::FETCH_ASSOC)) {
                 echo '
                 <div class="col-lg text-center my-5">';
                 echo '

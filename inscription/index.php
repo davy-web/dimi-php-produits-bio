@@ -59,17 +59,23 @@ include '../header2.php';
         <!-- Connexion -->
         <div class="container text-center mt-5">
             <form method="POST" action="">
-                <label for="login">Login (E-mail)</label><br>
-                <input type="text" id="login" name="login" class="border_input"><br><br>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <label for="login">Login</label><br>
+                        <input type="text" placeholder="Votre adresse e-mail" id="login" name="login" class="input border_input"><br><br>
 
-                <label for="password">Password</label><br>
-                <input type="password" id="password" name="password" class="border_input"><br><br>
+                        <label for="password">Password</label><br>
+                        <input type="password" placeholder="Votre mot de passe" id="password" name="password" class="input border_input"><br><br>
 
-                <label for="confirm_password">Confirm password</label><br>
-                <input type="password" id="confirm_password" name="confirm_password" class="border_input"><br><br>
+                        <label for="confirm_password">Confirm password</label><br>
+                        <input type="password" placeholder="Confirmer votre mot de passe" id="confirm_password" name="confirm_password" class="input border_input"><br><br>
 
-                <input type="submit" name="inscrire" value="S'inscrire" class="btn bouton_green color_white"><br>
-                <p class="color_red size_s py-5"><?php echo($error); ?></p>
+                        <input type="submit" name="inscrire" value="S'inscrire" class="btn bouton_green color_white"><br>
+                        <p class="color_red size_s py-5"><?php echo($error); ?></p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
             </form>
         </div>
 

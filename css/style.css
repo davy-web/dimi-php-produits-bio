@@ -70,9 +70,10 @@ a:hover {
     color: #99cc66;
 }
 .border_input {
-    border: 1px solid #303030;
+    border: none;
     border-radius: 10px;
     padding: 8px 12px;
+    background-color: #f0f3f4;
 }
 
 /* --- 3 - Size --- */

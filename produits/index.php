@@ -20,7 +20,7 @@ include '../header2.php';
                 echo '
                 <div class="col-lg-4 text-center my-5">';
                 echo '
-                    <img src="' . $chemin_page . $produit["photo"] . '" alt="produits bio" class="img-fluid rounded-circle">';
+                    <img src="' . $produit["photo"] . '" alt="produits bio" class="img-fluid rounded-circle">';
                 echo '
                     <h2 class="font_hotel">' . $produit["nom"] . '</h2>';
                 echo '
