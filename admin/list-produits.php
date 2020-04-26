@@ -10,7 +10,7 @@ include '../config.php';
                 <p class="col-sm size_s fond_noir m-0 p-3">Categorie</p>
                 <p class="col-sm size_s fond_noir2 m-0 p-3">Poids</p>
                 <p class="col-sm size_s fond_noir m-0 p-3">Prix</p>
-                <p class="col-sm size_s fond_noir2 m-0 p-3">Voir</p>
+                <p class="col-sm size_s fond_noir2 m-0 p-3">Modifier</p>
                 <p class="col-sm size_s fond_noir m-0 p-3">Supprimer</p>
             </div>
             <?php
@@ -26,7 +26,7 @@ include '../config.php';
                     <p class="col-sm size_s fond_noir2 m-0 p-3">' . $produit["poids"] . ' g</p>';
                 echo '
                     <p class="col-sm size_s fond_noir m-0 p-3">' . $produit["prix"] . ' €</p>';
-                echo '<a href="../produit/index.php?id=' . $produit['id'] . '" class="color_white col-sm size_s fond_noir2 m-0 p-3">Voir</a>';
+                echo '<a href="modifier/index.php?id=' . $produit['id'] . '" class="color_white col-sm size_s fond_noir2 m-0 p-3">Modifier</a>';
                 echo '
                     <a href="?delete=' . $produit["id"] . '" class="color_white col-sm size_s fond_noir m-0 p-3">Supprimer</a>';
                 echo '

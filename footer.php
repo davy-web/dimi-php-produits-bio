@@ -44,6 +44,8 @@
             </div>
         </footer>
         
+        <script src="<?php echo $chemin_page; ?>js/jquery.min.js"></script>
+        <script src="<?php echo $chemin_page; ?>js/bootstrap.js"></script>
         <script src="<?php echo $chemin_page; ?>js/script.js"></script>
     </body>
 </html>

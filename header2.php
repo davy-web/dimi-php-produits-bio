@@ -15,16 +15,33 @@
 
     <body>
         <header>
-            <nav class="navbar fixed-top bg_dark">
+            <nav class="navbar navbar-expand-lg fixed-top bg_dark">
                 <div class="container">
                     <a class="navbar-brand" href="<?php echo $chemin_page; ?>">
                         <img src="<?php echo $chemin_page; ?>images/logo.png" height="60" alt="logo">
                     </a>
-                    <div class="navbar-brand">
-                        <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>">Accueil</a>
-                        <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>produits/">Produits</a>
-                        <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>valeurs/">Nos valeurs</a>
-                        <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>contact/">Contact</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="material-icons color_white">menu</i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <div class="navbar-brand">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>produits/">Produits</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>valeurs/">Nos valeurs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="navbar-brand color_white" href="<?php echo $chemin_page; ?>contact/">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
