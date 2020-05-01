@@ -45,14 +45,6 @@ body {
     color: #99cc66;
     background-color: inherit;
 }
-.bouton_noir {
-    color: #333333;
-    background-color: inherit;
-    border: 0px solid inherit;
-}
-.bouton_noir:hover {
-    color: white;
-}
 .color_green {
     color: #99cc66;
 }
@@ -61,6 +53,15 @@ body {
 }
 .color_red {
     color: red;
+}
+.color_black {
+    color: #303030;
+}
+.bg_grey {
+    background-color: #f0f3f4;
+}
+.bg_grey2 {
+    background-color: #f6f7f8;
 }
 .bg_dark {
     background-color: #303030;
@@ -90,9 +91,34 @@ a:hover {
     padding: 15px;
     border-radius: 4px;
 }
-
 #top_button:hover {
     background-color: #555;
+}
+.bouton_admin {
+    color: white;
+    background-color: inherit;
+    border: none;
+    border-radius: 0px;
+    opacity: 0.5;
+}
+.bouton_admin:hover, .active_bouton {
+    opacity: 1;
+    color: white;
+}
+.menu_admin {
+    background-color: #303030;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+@media (max-width: 719px) {
+    .menu_admin {
+        min-height: 0vh;
+        position: relative;
+    }
 }
 
 /* --- 3 - Size --- */

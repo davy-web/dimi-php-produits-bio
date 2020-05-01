@@ -35,48 +35,33 @@ else {
         <meta name="description" content="Produits frais bio, commander maintenant !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>../images/icon.png">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/style.css">
     </head>
 
     <body>
-        <header>
-            <nav class="navbar fixed-top bg_dark">
-                <div class="container">
-                    <a class="navbar-brand" href="<?php echo $chemin_page; ?>../">
-                        <img src="<?php echo $chemin_page; ?>../images/logo.png" height="60" alt="logo">
-                    </a>
-                    <div class="navbar-brand">
-                        <form class="navbar-brand" method="POST" action="">
-                            <input class="btn bouton_green" type="submit" name="connexion" value="<?php echo($bouton_connexion); ?>"><br>
-                        </form>
-                    </div>
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!-- Menu left -->
+                <div class="col-md-3 col-lg-2 text-center pt-5 menu_admin">
+                    <div>
+                        <a class="navbar-brand" href="<?php echo $chemin_page; ?>../">
+                            <img src="<?php echo $chemin_page; ?>../images/logo.png" height="60" alt="logo">
+                        </a>
+                    </div><br><br>
+                    <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>.">List produits</a><br>
+                    <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>ajouter">Ajouter produits</a><br>
+                    <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>messages">Messages</a><br><br>
+                    <form method="POST" action="">
+                        <input class="btn bouton_green color_white" type="submit" name="connexion" value="<?php echo($bouton_connexion); ?>">
+                    </form><br>
                 </div>
-            </nav>
-            <div class="container-fluid fond_noir_0" style="height: 40vh;">
-                <div class="container pt-5">
-                    <div class="row pt-5">
-                        <div class="col-lg color_white align-self-center text-center pt-5">
-                            <h1 class="font_hotel color_green"><?php echo $title_header; ?></h1>
-                        </div>
+                
+                <!-- Contenu right -->
+                <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
+                    <div class="col-lg color_white align-self-center text-center pt-5">
+                        <h1 class="font_hotel color_green"><?php echo $title_header; ?></h1>
                     </div>
-                </div>
-            </div>
-        </header>
-
-        <div class="container-fluid fond_green py-2 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md">
-                        <a class="btn bouton_noir size_m" href="<?php echo $chemin_page; ?>.">List produits</a>
-                    </div>
-                    <div class="col-md">
-                        <a class="btn bouton_noir size_m" href="<?php echo $chemin_page; ?>ajouter">Ajouter produits</a>
-                    </div>
-                    <div class="col-md">
-                        <a class="btn bouton_noir size_m" href="<?php echo $chemin_page; ?>messages">Messages</a>
-                    </div>
-                </div>
-            </div>
-        </div>
