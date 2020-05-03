@@ -38,6 +38,7 @@ else {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>../images/icon.png">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/trumbowyg.min.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/style.css">
     </head>
 
@@ -54,6 +55,7 @@ else {
                     </div><br><br>
                     <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>.">List produits</a><br>
                     <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>ajouter">Ajouter produits</a><br>
+                    <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>valeurs">Modifier Nos valeurs</a><br>
                     <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>messages">Messages</a><br><br>
                     <form method="POST" action="">
                         <input class="btn bouton_green color_white" type="submit" name="connexion" value="<?php echo($bouton_connexion); ?>">

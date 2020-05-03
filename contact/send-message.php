@@ -37,7 +37,7 @@ if (isset($_POST['envoyer'])) {
                             </div>
                             <div class="col-md-6">
                                 <label for="mail" class="size_m color_green">Email</label>
-                                <input id="mail" class="input border_input" type="text" name="mail" placeholder="Votre adresse e-mail" required><br><br>
+                                <input id="mail" class="input border_input" type="email" name="mail" placeholder="Votre adresse e-mail" required><br><br>
                             </div>
                         </div>
                         <div class="row">
