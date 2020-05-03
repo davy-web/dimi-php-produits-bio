@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 23 avr. 2020 à 20:35
+-- Généré le :  Dim 03 mai 2020 à 23:04
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -89,6 +89,24 @@ CREATE TABLE `davy_users` (
 INSERT INTO `davy_users` (`id`, `login`, `password`) VALUES
 (1, 'chendavyweb@gmail.com', '$2y$10$DG0S6T0oD9QDBH/vyAI6xu7ADC8uyXx7trDUbfRsoqwmc4SemosVm');
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `davy_valeurs`
+--
+
+CREATE TABLE `davy_valeurs` (
+  `id` bigint(20) NOT NULL,
+  `contenu` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `davy_valeurs`
+--
+
+INSERT INTO `davy_valeurs` (`id`, `contenu`) VALUES
+(1, '<h1 class=\"font_hotel color_green\" style=\"text-align: center;\">Specie tenus \r\nadesset, Antiochensi plebi suppliciter</h1><p style=\"text-align: center;\"><img src=\"https://image.freepik.com/vecteurs-libre/feuilles-vertes-fond-nature-imprimer_1284-5438.jpg\" alt=\"nature\"></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\">Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus \r\nadesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret\r\n metum, quae per multas difficilisque causas adfore iam sperabatur, non \r\nut mos est principibus, quorum diffusa potestas localibus subinde \r\nmedetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta \r\ntransferri conterminis, sed consularem Syriae Theophilum prope adstantem\r\n ultima metuenti multitudini dedit id adsidue replicando quod invito \r\nrectore nullus egere poterit victu.</p><p style=\"text-align: center;\"><br></p>');
+
 --
 -- Index pour les tables déchargées
 --
@@ -112,6 +130,12 @@ ALTER TABLE `davy_users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `davy_valeurs`
+--
+ALTER TABLE `davy_valeurs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -132,6 +156,12 @@ ALTER TABLE `davy_produits`
 --
 ALTER TABLE `davy_users`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT pour la table `davy_valeurs`
+--
+ALTER TABLE `davy_valeurs`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
