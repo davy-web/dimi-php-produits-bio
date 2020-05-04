@@ -1,5 +1,6 @@
         
         <footer>
+            <!-- Infos footer -->
             <div class="container-fluid fond_noir color_white py-5">
                 <div class="container">
                     <div class="row">
@@ -34,6 +35,8 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Copyright Mentions -->
             <div class="container-fluid fond_noir2 pt-2">
                 <div class="container">
                     <div class="row">
@@ -45,7 +48,7 @@
         </footer>
         
         <script src="<?php echo $chemin_page; ?>js/jquery.min.js"></script>
-        <script src="<?php echo $chemin_page; ?>js/bootstrap.js"></script>
+        <script src="<?php echo $chemin_page; ?>js/bootstrap.min.js"></script>
         <script src="<?php echo $chemin_page; ?>js/script.js"></script>
     </body>
 </html>

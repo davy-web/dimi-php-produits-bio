@@ -19,5 +19,5 @@ if (isset($_SESSION['connect'])) {
 ?>
 
 <?php
-include '../footer-admin.php';
+include '../footer-admin2.php';
 ?>

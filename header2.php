@@ -9,12 +9,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>images/icon.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="<?php echo $chemin_page; ?>css/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo $chemin_page; ?>css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>css/style.css">
     </head>
 
     <body>
         <header>
+            <!-- Menu -->
             <nav class="navbar navbar-expand-lg fixed-top bg_dark">
                 <div class="container">
                     <a class="navbar-brand" href="<?php echo $chemin_page; ?>">
@@ -45,6 +46,8 @@
                     </div>
                 </div>
             </nav>
+            
+            <!-- Header -->
             <div class="container-fluid fond_noir_0" style="height: 45vh;">
                 <div class="container pt-5">
                     <div class="row pt-5">

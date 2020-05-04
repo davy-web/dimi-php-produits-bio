@@ -24,7 +24,7 @@ if (isset($_POST['envoyer'])) {
     }
 }
 ?>
-
+        <!-- Formulaire Contact -->
         <div class="container rounded p-5 my-5">
             <div class="row">
                 <div class="col-lg-2"></div>

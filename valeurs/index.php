@@ -13,7 +13,11 @@ include '../header2.php';
 
         <!-- Nos valeurs -->
         <div class="container my-5">
+            
+            <!-- Editeur WYSIWYG -->
             <?php echo $produit['contenu']; ?>
+            
+            
         </div>
 
 <?php

@@ -3,6 +3,7 @@ $error = "";
 if(!empty($_GET['id'])) {
     if (isset($_POST['enregistrer'])) {
         if (!empty($_POST['nom'])) {
+            // Modifier infos produits
             $result = $pdo->prepare('UPDATE davy_produits SET nom=:nom, photo=:photo, description=:description, prix=:prix, categorie=:categorie, origine=:origine, date=:date, poids=:poids WHERE id = :id');
             $result->execute(array(
                 'id' => $_GET['id'],

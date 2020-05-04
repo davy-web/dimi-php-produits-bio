@@ -9,6 +9,8 @@ include '../header2.php';
         <div class="container mt-5">
             <p class="text-center pb-5">Quarum sexu nefas sexu participes sufficiens exustus nefas feminae feminae fuere altae hoc cum nam altera fuere feminae duceretur sunt quo nefas quas ad similium altera quidem inter inter retinere.</p>
         </div>
+
+        <!-- Infos Contact -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 text-center my-5">

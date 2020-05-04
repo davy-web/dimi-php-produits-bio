@@ -5,6 +5,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+// Bouton connexion et déconnexion
 if (isset($_POST['connexion'])) {
     if (isset($_SESSION['connect'])) {
         unset($_SESSION['connect']);
@@ -14,6 +15,7 @@ if (isset($_POST['connexion'])) {
     exit();
 }
 
+// Vérifier connexion
 if (isset($_SESSION['connect'])) {
     if ($_SESSION['connect'] == "connect") {
         $bouton_connexion = "Se déconnecter";
@@ -37,7 +39,7 @@ else {
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>../images/icon.png">
-        <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/trumbowyg.min.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/style.css">
     </head>
