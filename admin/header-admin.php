@@ -38,7 +38,7 @@ else {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>../images/icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>../images/icon.svg">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/trumbowyg.min.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>../css/style.css">
@@ -52,7 +52,7 @@ else {
                 <div class="col-md-3 col-lg-2 text-center pt-5 menu_admin">
                     <div>
                         <a class="navbar-brand" href="<?php echo $chemin_page; ?>../">
-                            <img src="<?php echo $chemin_page; ?>../images/logo.png" height="60" alt="logo">
+                            <img src="<?php echo $chemin_page; ?>../images/logo.svg" height="60" alt="logo">
                         </a>
                     </div><br><br>
                     <a class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>.">List produits</a><br>

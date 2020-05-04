@@ -144,26 +144,26 @@ p {
 
 /* --- 4 - Background --- */
 .fond_header {
-    background-image: url(../images/header.jpg);
+    background-image: url(../images/header.svg);
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
 }
 .fond_noir_1 {
-    background-image: url(../images/fond-noir-1.png);
+    background-image: url(../images/fond-noir-1.svg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fond_noir_2 {
-    background-image: url(../images/fond-noir-2.png);
+    background-image: url(../images/fond-noir-2.svg);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fond_noir_0 {
-    background-image: url(../images/fond-noir-0.png);
+    background-image: url(../images/fond-noir-0.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

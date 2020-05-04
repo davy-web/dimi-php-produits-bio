@@ -7,7 +7,7 @@
         <meta name="description" content="Produits frais bio, commander maintenant !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>images/icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>images/icon.svg">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo $chemin_page; ?>css/style.css">
@@ -19,7 +19,7 @@
             <nav class="navbar navbar-expand-lg fixed-top bg_dark">
                 <div class="container">
                     <a class="navbar-brand" href="<?php echo $chemin_page; ?>">
-                        <img src="<?php echo $chemin_page; ?>images/logo.png" height="60" alt="logo">
+                        <img src="<?php echo $chemin_page; ?>images/logo.svg" height="60" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="material-icons color_white">menu</i>

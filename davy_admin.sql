@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 03 mai 2020 à 23:04
+-- Généré le :  lun. 04 mai 2020 à 17:01
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -105,7 +105,7 @@ CREATE TABLE `davy_valeurs` (
 --
 
 INSERT INTO `davy_valeurs` (`id`, `contenu`) VALUES
-(1, '<h1 class=\"font_hotel color_green\" style=\"text-align: center;\">Specie tenus \r\nadesset, Antiochensi plebi suppliciter</h1><p style=\"text-align: center;\"><img src=\"https://image.freepik.com/vecteurs-libre/feuilles-vertes-fond-nature-imprimer_1284-5438.jpg\" alt=\"nature\"></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\">Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus \r\nadesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret\r\n metum, quae per multas difficilisque causas adfore iam sperabatur, non \r\nut mos est principibus, quorum diffusa potestas localibus subinde \r\nmedetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta \r\ntransferri conterminis, sed consularem Syriae Theophilum prope adstantem\r\n ultima metuenti multitudini dedit id adsidue replicando quod invito \r\nrectore nullus egere poterit victu.</p><p style=\"text-align: center;\"><br></p>');
+(1, '<h1 class=\"font_hotel color_green\" style=\"text-align: center;\">Specie tenus adesset, Antiochensi plebi suppliciter</h1>\r\n<br>\r\n<p style=\"text-align: center;\"><img src=\"https://image.freepik.com/vecteurs-libre/feuilles-vertes-fond-nature-imprimer_1284-5438.jpg\" alt=\"nature\"></p>\r\n<br>\r\n<p style=\"text-align: center;\">Post haec Gallus Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis, disponi quicquam statuit vel ex provinciis alimenta transferri conterminis, sed consularem Syriae Theophilum prope adstantem\r\n ultima metuenti multitudini dedit id adsidue replicando quod invito rectore nullus egere poterit victu.</p>\r\n<br>');
 
 --
 -- Index pour les tables déchargées

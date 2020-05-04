@@ -56,7 +56,7 @@ $chemin_page = "../";
 include '../header2.php';
 ?>
 
-        <!-- Connexion -->
+        <!-- Inscription -->
         <div class="container text-center mt-5">
             <form method="POST" action="">
                 <div class="row">
