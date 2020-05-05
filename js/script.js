@@ -14,6 +14,7 @@ function scroll_button() {
 }
 
 function top_scroll() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    $("html, body").animate({scrollTop: "0"}, 1000); 
+    //document.body.scrollTop = 0;
+    //document.documentElement.scrollTop = 0;
 }
