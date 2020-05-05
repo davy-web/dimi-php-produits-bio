@@ -2,6 +2,15 @@
 $error = "";
 $chemin_page = "../";
 include '../config.php';
+
+// Supprimer Produits
+if(!empty($_GET['delete'])) {
+    $result2 = $pdo->prepare('DELETE FROM davy_produits WHERE id = :id');
+    $result2->execute(array(
+        'id' => $_GET['delete']
+    ));
+    header('Location: .');
+}
 ?>
 
                     <div class="container my-5 color_white">
@@ -13,31 +22,24 @@ include '../config.php';
                             <p class="col-sm size_s bg_grey m-0 p-3">Modifier</p>
                             <p class="col-sm size_s bg_grey2 m-0 p-3">Supprimer</p>
                         </div>
-                    <?php
-                    // Affichier Produits
-                    $result = $pdo->query("SELECT * FROM davy_produits");
-                    while($produit = $result->fetch(PDO::FETCH_ASSOC)){
-                        echo '
-                        <div class="row text-center p-1">';
-                        echo '
-                            <p class="col-sm size_s bg_grey color_black m-0 p-3">' . $produit["nom"] . '</p>';
-                        echo '
-                            <p class="col-sm size_s bg_grey2 color_black m-0 p-3">' . $produit["categorie"] . '</p>';
-                        echo '
-                            <p class="col-sm size_s bg_grey color_black m-0 p-3">' . $produit["poids"] . ' g</p>';
-                        echo '
-                            <p class="col-sm size_s bg_grey2 color_black m-0 p-3">' . $produit["prix"] . ' €</p>';
-                        echo '<a href="modifier/index.php?id=' . $produit['id'] . '" class="color_black col-sm size_s bg_grey m-0 p-3">Modifier</a>';
-                        echo '
-                            <a href="?delete=' . $produit["id"] . '" class="color_black col-sm size_s bg_grey2 m-0 p-3">Supprimer</a>';
-                        echo '
+                        
+                        <?php
+                        // Affichier Produits
+                        $result = $pdo->query("SELECT * FROM davy_produits");
+                        while ($produit = $result->fetch(PDO::FETCH_ASSOC)) {
+                        ?>
+                        
+                        <div class="row text-center p-1">
+                            <p class="col-sm size_s bg_grey color_black m-0 p-3"><?php echo $produit["nom"]; ?></p>
+                            <p class="col-sm size_s bg_grey2 color_black m-0 p-3"><?php echo $produit["categorie"]; ?></p>
+                            <p class="col-sm size_s bg_grey color_black m-0 p-3"><?php echo $produit["poids"]; ?></p>
+                            <p class="col-sm size_s bg_grey2 color_black m-0 p-3"><?php echo $produit["prix"]; ?></p>
+                            <a href="modifier/index.php?id=<?php echo $produit['id']; ?>" class="color_black col-sm size_s bg_grey m-0 p-3">Modifier</a>
+                            <a href="?delete=<?php echo $produit["id"]; ?>" class="color_black col-sm size_s bg_grey2 m-0 p-3">Supprimer</a>
                         </div>
-                    ';
-                        if(!empty($_GET['delete'])) {
-                            $result2 = $pdo->prepare('DELETE FROM davy_produits WHERE id = :id');
-                            $result2->execute(array(
-                                'id' => $_GET['delete']
-                            ));
-                            header('Location: .');
+                        
+                        <?php
                         }
-                    }?></div>
+                        ?>
+                        
+                    </div>

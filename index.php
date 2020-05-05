@@ -15,21 +15,24 @@ include 'header.php';
         <!-- 3 Produits -->
         <div class="container my-5">
             <div class="row my-5">
-            <?php
-            $result = $pdo->query("SELECT * FROM davy_produits WHERE 4 order by rand()");
-            while($produit = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo '
-                <div class="col-lg text-center my-5">';
-                echo '
-                    <img src="' . $produit["photo"] . '" alt="produits bio" class="img-fluid rounded-circle">';
-                echo '
-                    <h2 class="font_hotel">' . $produit["nom"] . '</h2>';
-                echo '
-                    <p>' . $produit["prix"] . ' €</p>';
-                echo '<a href="produit/index.php?id=' . $produit['id'] . '" class="color_green">Voir</a>';
-                echo '
-                </div>';
-            }?></div>
+                
+                <?php
+                $result = $pdo->query("SELECT * FROM davy_produits WHERE 4 order by rand()");
+                while ($produit = $result->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+                
+                <div class="col-lg text-center my-5">
+                    <img src="<?php echo $produit["photo"]; ?>" alt="produits bio" class="img-fluid rounded-circle">
+                    <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
+                    <p><?php echo $produit["prix"]; ?> €</p>
+                    <a href="produit/index.php?id=<?php echo $produit["id"]; ?>" class="color_green">Voir</a>
+                </div>
+                
+                <?php
+                }
+                ?>
+            
+            </div>
         </div>
 
         <!-- Fruits Bio -->

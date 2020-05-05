@@ -11,7 +11,7 @@ if($_POST) {
 
     if (!empty($_POST['login'])) {
         if (filter_var($_POST['login'], FILTER_VALIDATE_EMAIL)) {
-            while($users = $result->fetch(PDO::FETCH_ASSOC)){
+            while ($users = $result->fetch(PDO::FETCH_ASSOC)) {
                 if ($_POST['login'] == $users["login"]) {
                     $user_double = 1;
                 }
