@@ -2,7 +2,7 @@
 $error = "";
 include '../config.php';
 
-if($_POST) {
+if ($_POST) {
     $result = $pdo->prepare('SELECT * FROM davy_users WHERE login = :login');
     $result->execute(array(
         'login' => $_POST['login']

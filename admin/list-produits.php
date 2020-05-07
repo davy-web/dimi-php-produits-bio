@@ -4,7 +4,7 @@ $chemin_page = "../";
 include '../config.php';
 
 // Supprimer Produits
-if(!empty($_GET['delete'])) {
+if (!empty($_GET['delete'])) {
     $result2 = $pdo->prepare('DELETE FROM davy_produits WHERE id = :id');
     $result2->execute(array(
         'id' => $_GET['delete']

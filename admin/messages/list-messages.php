@@ -2,7 +2,7 @@
 $error = "";
 
 // Supprimer messages
-if(!empty($_GET['delete'])) {
+if (!empty($_GET['delete'])) {
     $result2 = $pdo->prepare('DELETE FROM davy_messages WHERE id = :id');
     $result2->execute(array(
         'id' => $_GET['delete']

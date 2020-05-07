@@ -4,7 +4,7 @@ $title_header = "Modifier";
 $chemin_page = "../";
 
 // Titre
-if(!empty($_GET['id'])) {
+if (!empty($_GET['id'])) {
     $result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
     $result->execute(array(
         'id' => $_GET['id']

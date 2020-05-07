@@ -2,7 +2,8 @@
 include '../config.php';
 $title_page = "Produit - Produits Bio";
 $title_header = "Produit";
-if(!empty($_GET['id'])) {
+
+if (!empty($_GET['id'])) {
     $result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
     $result->execute(array(
         'id' => $_GET['id']
@@ -20,7 +21,7 @@ include '../header2.php';
             <div class="row my-5">
                 
                 <?php
-                if(!empty($_GET['id'])) {
+                if (!empty($_GET['id'])) {
                     $result = $pdo->prepare('SELECT * FROM davy_produits WHERE id = :id');
                     $result->execute(array(
                         'id' => $_GET['id']

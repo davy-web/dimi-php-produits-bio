@@ -1,7 +1,7 @@
 <?php
 $error = "";
 
-if(!empty($_GET['id'])) {
+if (!empty($_GET['id'])) {
     if (isset($_POST['enregistrer'])) {
         if (!empty($_POST['nom'])) {
             // Modifier infos produits
