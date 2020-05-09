@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 09 mai 2020 à 02:04
+-- Généré le :  sam. 09 mai 2020 à 23:43
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `davy_admin`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `davy_dashboard`
+--
+
+CREATE TABLE `davy_dashboard` (
+  `id` bigint(20) NOT NULL,
+  `page_accueil` int(11) NOT NULL,
+  `page_produits` int(11) NOT NULL,
+  `page_contact` int(11) NOT NULL,
+  `page_valeurs` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -69,19 +83,19 @@ INSERT INTO `davy_produits` (`id`, `nom`, `photo`, `description`, `prix`, `categ
 (1, 'Kiwi vert pièce Calibre 36 Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/k/i/kiwi.4-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'fruit', 'france', '2020-04-14', 125),
 (2, 'Myrtille barguette 125G Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/m/y/myrtille-0003.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 2.99, 'fruit', 'france', '2020-04-14', 125),
 (3, 'Brocoli 500G Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/b/r/brocoli-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'légume', 'france', '2020-04-14', 500),
-(4, 'Banane - Lot de 5 fruits Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/6/6/6608.1-0001.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'france', '2020-04-14', 500),
-(5, 'Kumquat 250G Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/k/u/kumquats-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'fruit', 'france', '2020-04-14', 250),
+(4, 'Banane - Lot de 5 fruits Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/6/6/6608.1-0001.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'chine', '2020-04-14', 500),
+(5, 'Kumquat 250G Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/k/u/kumquats-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'fruit', 'espagne', '2020-04-14', 250),
 (6, 'Orange de table x4 pièce Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/o/r/orange_navel-0003.png', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 2.99, 'fruit', 'france', '2020-04-14', 125),
 (7, 'Pomme Golden AOP Limousin Bio - Lot de 4', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/p/o/pomme_golden.2.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'france', '2020-04-14', 500),
-(8, 'Ananas Extra Sweet Pièce Cal 10 Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/a/n/ananas-0002.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'france', '2020-04-14', 500),
-(9, 'Mangue Osteen pièce CAL 10 Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/m/a/mangue-0006.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'fruit', 'france', '2020-04-14', 125),
-(10, 'Noix de coco fraiche pièce Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/8/4/8437015393070.p1-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 2.99, 'fruit', 'france', '2020-04-14', 125),
+(8, 'Ananas Extra Sweet Pièce Cal 10 Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/a/n/ananas-0002.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'chine', '2020-04-14', 500),
+(9, 'Mangue Osteen pièce CAL 10 Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/m/a/mangue-0006.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'fruit', 'afrique', '2020-04-14', 125),
+(10, 'Noix de coco fraiche pièce Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/8/4/8437015393070.p1-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 2.99, 'fruit', 'tahiti', '2020-04-14', 125),
 (11, 'Mandarine 500G Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/c/l/clementine-0004.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'france', '2020-04-14', 500),
 (12, 'Amandes entières 250G Bio', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/a/m/amandes-0004.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'fruit', 'france', '2020-04-14', 250),
-(13, 'Avocat Hass pièce Calibre 20 Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/a/v/avocat-0004_1.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'légume', 'france', '2020-04-14', 125),
+(13, 'Avocat Hass pièce Calibre 20 Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/a/v/avocat-0004_1.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 0.79, 'légume', 'espagne', '2020-04-14', 125),
 (14, 'Chou-Fleur Pièce Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/8/2/8207.1.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 2.99, 'légume', 'france', '2020-04-14', 125),
 (15, 'Salade jeunes pousses d\'épinard barquette 125G', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/3/7/3760281780141.1-0000_1.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'légume', 'france', '2020-04-14', 125),
-(16, 'Champignon Pleurote 200G Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/6/7/6712.1-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'légume', 'france', '2020-04-14', 200);
+(16, 'Champignon Pleurote 200G Bio ', 'https://naturalia.fr/media/catalog/product/cache/image/368x414/e9c3970ab036de70892d86c6d221abfe/6/7/6712.1-0000.jpg', 'Intentum quidem liberalium huius ultra inopiam ob delatae sese vini: inopiam regebat gnarus avidis oppido efferens haec praefecti sese negotiorum.', 1.99, 'légume', 'espagne', '2020-04-14', 200);
 
 -- --------------------------------------------------------
 
@@ -125,6 +139,12 @@ INSERT INTO `davy_valeurs` (`id`, `contenu`) VALUES
 --
 
 --
+-- Index pour la table `davy_dashboard`
+--
+ALTER TABLE `davy_dashboard`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `davy_messages`
 --
 ALTER TABLE `davy_messages`
@@ -151,6 +171,12 @@ ALTER TABLE `davy_valeurs`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `davy_dashboard`
+--
+ALTER TABLE `davy_dashboard`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `davy_messages`
