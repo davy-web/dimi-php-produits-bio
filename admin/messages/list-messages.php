@@ -31,7 +31,7 @@ if (!empty($_GET['delete'])) {
                             <p class="col-sm-2 size_s bg_grey2 color_black m-0 p-3"><?php echo $message["mail"]; ?></p>
                             <p class="col-sm-2 size_s bg_grey color_black m-0 p-3"><?php echo $message["sujet"]; ?></p>
                             <p class="col-sm-4 size_s bg_grey2 color_black m-0 p-3"><?php echo $message["message"]; ?></p>
-                            <a href="?delete=<?php echo $message["id"]; ?>" class="col-sm-2 size_s bg_grey color_black m-0 p-3">Supprimer</a>
+                            <a title="Bouton Supprimer" href="?delete=<?php echo $message["id"]; ?>" class="col-sm-2 size_s bg_grey color_black m-0 p-3">Supprimer</a>
                         </div>
                         
                         <?php

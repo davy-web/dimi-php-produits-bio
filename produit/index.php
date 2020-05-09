@@ -30,7 +30,7 @@ include '../header2.php';
                 ?>
                 
                 <div class="col-md text-center my-5">
-                    <img src="<?php echo $produit["photo"]; ?>" alt="produits bio" class="img-fluid rounded-circle">
+                    <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid rounded-circle">
                 </div>
                 <div class="col-md my-5">
                     <h2 class="font_hotel color_green size_l"><?php echo $produit["nom"]; ?></h2>
@@ -62,15 +62,16 @@ include '../header2.php';
             <div class="row my-5">
                 
                 <?php
-                $result = $pdo->query("SELECT * FROM davy_produits WHERE 4 order by rand()");
+                $result = $pdo->query("SELECT * FROM davy_produits WHERE 4 order by rand() LIMIT 3");
                 while ($produit = $result->fetch(PDO::FETCH_ASSOC)) {
                 ?>
                 
                 <div class="col-lg text-center my-5">
-                    <img src="<?php echo $produit["photo"]; ?>" alt="produits bio" class="img-fluid rounded-circle">
-                    <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
+                    <a title="Voir Produit" href="index.php?id=<?php echo $produit["id"]; ?>" class="color_black">
+                        <img src="<?php echo $produit["photo"]; ?>" alt="produits bio" class="img-fluid rounded-circle">
+                        <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
+                    </a>
                     <p><?php echo $produit["prix"]; ?> €</p>
-                    <a href="index.php?id=<?php echo $produit["id"]; ?>" class="color_green">Voir</a>
                 </div>
                 
                 <?php

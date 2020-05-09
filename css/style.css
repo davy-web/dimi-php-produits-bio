@@ -26,6 +26,9 @@ Davy CHEN
 body {
     margin: 0px;
 }
+a, a:hover {
+    text-decoration: none;
+}
 
 /* --- 1 - Fonts --- */
 .font_hotel {
@@ -138,6 +141,9 @@ p {
     font-size: 1rem;
 }
 .input {
+    width: 100%;
+}
+.photo {
     width: 100%;
 }
 

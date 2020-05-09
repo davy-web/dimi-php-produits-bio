@@ -8,6 +8,7 @@ include 'header-admin.php';
 <?php
 if (isset($_SESSION['connect'])) {
     if ($_SESSION['connect'] == "connect") {
+        include 'dashboard.php';
         include 'list-produits.php';
     }
 }

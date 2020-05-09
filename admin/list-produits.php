@@ -34,8 +34,8 @@ if (!empty($_GET['delete'])) {
                             <p class="col-sm size_s bg_grey2 color_black m-0 p-3"><?php echo $produit["categorie"]; ?></p>
                             <p class="col-sm size_s bg_grey color_black m-0 p-3"><?php echo $produit["poids"]; ?></p>
                             <p class="col-sm size_s bg_grey2 color_black m-0 p-3"><?php echo $produit["prix"]; ?></p>
-                            <a href="modifier/index.php?id=<?php echo $produit['id']; ?>" class="color_black col-sm size_s bg_grey m-0 p-3">Modifier</a>
-                            <a href="?delete=<?php echo $produit["id"]; ?>" class="color_black col-sm size_s bg_grey2 m-0 p-3">Supprimer</a>
+                            <a title="Bouton Modifier" href="modifier/index.php?id=<?php echo $produit['id']; ?>" class="color_black col-sm size_s bg_grey m-0 p-3">Modifier</a>
+                            <a title="Bouton Supprimer" href="?delete=<?php echo $produit["id"]; ?>" class="color_black col-sm size_s bg_grey2 m-0 p-3">Supprimer</a>
                         </div>
                         
                         <?php

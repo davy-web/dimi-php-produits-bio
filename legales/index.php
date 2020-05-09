@@ -37,7 +37,7 @@ include '../header2.php';
             <br>
             <h2 class="color_green size_l font_hotel">Article 6 : Propriété intellectuelle</h2>
             <p class="size_s">Toute utilisation, reproduction, diffusion, commercialisation, modification de toute ou partie du site ________________, sans autorisation de l’Editeur est prohibée et pourra entraînée des actions et poursuites judiciaires telles que notamment prévues par le Code de la propriété intellectuelle et le Code civil.</p>
-            <a href="https://fr.freepik.com/" class="size_s color_green">Illustration : Freepik</a>
+            <a title="Site Freepik" href="https://fr.freepik.com/" class="size_s color_green">Illustration : Freepik</a>
             <br><br><br><br><br>
         </div>
 

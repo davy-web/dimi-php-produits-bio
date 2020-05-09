@@ -4,6 +4,24 @@ $title_page = "Produits - Produits Bio";
 $title_header = "Nos Produits";
 $chemin_page = "../";
 include '../header2.php';
+
+// Pagination
+$produit_par_page = 12;
+$result2 = $pdo->query("SELECT count(id) AS total FROM davy_produits");
+$nb_produits = $result2->fetch(PDO::FETCH_ASSOC);
+$nb_total_produits = $nb_produits['total'];
+$nb_pages = ceil($nb_total_produits / $produit_par_page);
+
+if (isset($_GET['page'])) {
+    $page_actuelle = $_GET['page'];
+    if ($page_actuelle > $nb_pages) {
+        $page_actuelle = $nb_pages;
+    }
+}
+else {
+    $page_actuelle = 1;
+}
+$premiere_produit = ($page_actuelle - 1) * $produit_par_page;
 ?>
 
         <!-- Nos produits -->
@@ -16,15 +34,17 @@ include '../header2.php';
             <div class="row my-5">
                 
                 <?php
-                $result = $pdo->query("SELECT * FROM davy_produits");
+                $query_produits = "SELECT * FROM davy_produits ORDER BY id DESC LIMIT " . $premiere_produit . ", " . $produit_par_page;
+                $result = $pdo->query($query_produits);
                 while ($produit = $result->fetch(PDO::FETCH_ASSOC)) {
                 ?>
                 
                 <div class="col-lg-4 text-center my-5">
-                    <img src="<?php echo $produit["photo"]; ?>" alt="produits bio" class="img-fluid rounded-circle">
-                    <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
+                    <a title="Voir Produit" href="../produit/index.php?id=<?php echo $produit["id"]; ?>" class="color_black">
+                        <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid rounded-circle">
+                        <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
+                    </a>
                     <p><?php echo $produit["prix"]; ?> €</p>
-                    <a href="../produit/index.php?id=<?php echo $produit["id"]; ?>" class="color_green">Voir</a>
                 </div>
                 
                 <?php
@@ -32,6 +52,17 @@ include '../header2.php';
                 ?>
                 
             </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="text-center my-5">
+            
+            <?php
+            for ($i = 1; $i <= $nb_pages; $i++) {
+                echo '<a class="btn bouton_green color_white mx-2 p-3" href="?page=' . $i . '">' . $i . '</a>';
+            }
+            ?>
+        
         </div>
 
 <?php
