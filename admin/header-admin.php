@@ -51,16 +51,16 @@ else {
                 <!-- Menu left -->
                 <div class="col-md-3 col-lg-2 text-center pt-5 menu_admin">
                     <div>
-                        <a title="Bouton Accueil" class="navbar-brand" href="<?php echo $chemin_page; ?>../">
+                        <a title="Accueil" class="navbar-brand" href="<?php echo $chemin_page; ?>../">
                             <img src="<?php echo $chemin_page; ?>../images/logo.svg" height="60" alt="logo">
                         </a>
                     </div><br><br>
-                    <a title="Bouton List" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>.">Dashboard</a><br>
-                    <a title="Bouton Ajouter" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>produits">List produits</a><br>
-                    <a title="Bouton Ajouter" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>ajouter">Ajouter produits</a><br>
-                    <a title="Bouton Modifier" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>valeurs">Modifier Nos valeurs</a><br>
-                    <a title="Bouton Galerie" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>galerie">Galerie</a><br>
-                    <a title="Bouton Messages" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>messages">Messages</a><br><br>
+                    <a title="Dashboard" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>.">Dashboard</a><br>
+                    <a title="List produits" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>produits">List produits</a><br>
+                    <a title="Ajouter produits" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>ajouter">Ajouter produits</a><br>
+                    <a title="Modifier Nos valeurs" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>valeurs">Modifier Nos valeurs</a><br>
+                    <a title="Galerie photos" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>galerie">Galerie</a><br>
+                    <a title="Messages" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>messages">Messages</a><br><br>
                     <form method="POST" action="">
                         <input class="btn bouton_green color_white" type="submit" name="connexion" value="<?php echo($bouton_connexion); ?>">
                     </form><br>

@@ -32,7 +32,7 @@ function nb_visit($page, $pdo) {
             <!-- Menu -->
             <nav class="navbar navbar-expand-lg fixed-top bg_dark">
                 <div class="container">
-                    <a title="Bouton Accueil" class="navbar-brand" href="<?php echo $chemin_page; ?>">
+                    <a title="Accueil" class="navbar-brand" href="<?php echo $chemin_page; ?>">
                         <img src="<?php echo $chemin_page; ?>images/logo.svg" height="60" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,16 +44,16 @@ function nb_visit($page, $pdo) {
                         <div class="navbar-brand">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a title="Bouton Accueil" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>">Accueil</a>
+                                    <a title="Accueil" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>">Accueil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a title="Bouton Produits" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>produits/">Produits</a>
+                                    <a title="Produits" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>produits/">Produits</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a title="Bouton Valeurs" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>valeurs/">Nos valeurs</a>
+                                    <a title="Valeurs" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>valeurs/">Nos valeurs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a title="Bouton Contact" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>contact/">Contact</a>
+                                    <a title="Contact" class="navbar-brand color_white" href="<?php echo $chemin_page; ?>contact/">Contact</a>
                                 </li>
                             </ul>
                         </div>

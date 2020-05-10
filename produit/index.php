@@ -30,7 +30,7 @@ include '../header2.php';
                 ?>
                 
                 <div class="col-md text-center my-5">
-                    <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid rounded-circle">
+                    <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid">
                 </div>
                 <div class="col-md my-5">
                     <h2 class="font_hotel color_green size_l"><?php echo $produit["nom"]; ?></h2>
@@ -68,7 +68,7 @@ include '../header2.php';
                 
                 <div class="col-lg text-center my-5">
                     <a title="Voir Produit" href="index.php?id=<?php echo $produit["id"]; ?>" class="color_black">
-                        <img src="<?php echo $produit["photo"]; ?>" alt="produits bio" class="img-fluid rounded-circle">
+                        <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid">
                         <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
                     </a>
                     <p><?php echo $produit["prix"]; ?> €</p>

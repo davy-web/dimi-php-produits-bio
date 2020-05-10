@@ -182,3 +182,41 @@ p {
 .fond_green {
     background-color: #99cc66;
 }
+.fond_green1 {
+    background-color: #f2f7ec;
+}
+.haut_vert_1 {
+    background-image: url(../images/haut-vert1.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15vh;
+}
+.haut_vert_2 {
+    background-image: url(../images/haut-vert2.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15vh;
+}
+.haut_vert_3 {
+    background-image: url(../images/haut-vert3.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15vh;
+}
+.milieu_vert {
+    background-image: url(../images/milieu-vert.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15vh;
+}
+.bas_vert {
+    background-image: url(../images/bas-vert.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15vh;
+}

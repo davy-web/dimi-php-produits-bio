@@ -12,23 +12,23 @@
                             <div class="row">
                                 <div class="col-lg">
                                     <h3>A PROPOS</h3>
-                                    <a title="Bouton Histoire" href="<?php echo $chemin_page; ?>valeurs/" class="color_white">Histoire</a><br>
-                                    <a title="Bouton Equipe" href="<?php echo $chemin_page; ?>valeurs/" class="color_white">Notre équipe</a><br>
-                                    <a title="Bouton Conditions" href="<?php echo $chemin_page; ?>valeurs/" class="color_white">Conditions</a><br><br>
+                                    <a title="Histoire" href="<?php echo $chemin_page; ?>valeurs/" class="color_white">Histoire</a><br>
+                                    <a title="Equipe" href="<?php echo $chemin_page; ?>valeurs/" class="color_white">Notre équipe</a><br>
+                                    <a title="Conditions" href="<?php echo $chemin_page; ?>valeurs/" class="color_white">Conditions</a><br><br>
                                 </div>
                                 <div class="col-lg">
                                     <h3>SERVICES</h3>
-                                    <a title="Bouton Commande" href="#" class="color_white">Commande</a><br>
-                                    <a title="Bouton Produits" href="<?php echo $chemin_page; ?>produits/" class="color_white">Nos produits</a><br>
-                                    <a title="Bouton Livraison" href="#" class="color_white">Livraison</a><br>
-                                    <a title="Bouton Paiement" href="#" class="color_white">Paiement</a><br><br>
+                                    <a title="Commande" href="#" class="color_white">Commande</a><br>
+                                    <a title="Produits" href="<?php echo $chemin_page; ?>produits/" class="color_white">Nos produits</a><br>
+                                    <a title="Livraison" href="#" class="color_white">Livraison</a><br>
+                                    <a title="Paiement" href="#" class="color_white">Paiement</a><br><br>
                                 </div>
                                 <div class="col-lg">
                                     <h3>AUTRES</h3>
-                                    <a title="Bouton Contact" href="<?php echo $chemin_page; ?>contact/" class="color_white">Contact</a><br>
-                                    <a title="Bouton Connexion" href="<?php echo $chemin_page; ?>connexion/" class="color_white">Connexion</a><br>
-                                    <a title="Bouton Inscription" href="<?php echo $chemin_page; ?>inscription/" class="color_white">Inscription</a><br>
-                                    <a title="Bouton Aide" href="#" class="color_white">Aide</a><br><br>
+                                    <a title="Contact" href="<?php echo $chemin_page; ?>contact/" class="color_white">Contact</a><br>
+                                    <a title="Connexion" href="<?php echo $chemin_page; ?>connexion/" class="color_white">Connexion</a><br>
+                                    <a title="Inscription" href="<?php echo $chemin_page; ?>inscription/" class="color_white">Inscription</a><br>
+                                    <a title="Aide" href="#" class="color_white">Aide</a><br><br>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                 <div class="container">
                     <div class="row">
                         <p class="size_s color_green pr-2">Copyright© 2020 PRODUITS BIO. Tous droits réservés.</p>
-                        <a title="Bouton Mentions" href="<?php echo $chemin_page; ?>legales/" class="color_white">Mentions légales.</a>
+                        <a title="Mentions" href="<?php echo $chemin_page; ?>legales/" class="color_white">Mentions légales.</a>
                     </div>
                 </div>
             </div>

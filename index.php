@@ -26,7 +26,7 @@ nb_visit('page_accueil', $pdo);
                 
                 <div class="col-lg text-center my-5">
                     <a title="Voir Produit" href="produit/index.php?id=<?php echo $produit["id"]; ?>" class="color_black">
-                        <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid rounded-circle">
+                        <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid">
                         <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
                     </a>
                     <p><?php echo $produit["prix"]; ?> €</p>
@@ -131,7 +131,7 @@ nb_visit('page_accueil', $pdo);
                 
                 <div class="col-lg text-center my-5">
                     <a title="Voir Produit" href="produit/index.php?id=<?php echo $produit2["id"]; ?>" class="color_black">
-                        <img src="<?php echo $produit2["photo"]; ?>" alt="<?php echo $produit2["nom"]; ?>" class="img-fluid rounded-circle">
+                        <img src="<?php echo $produit2["photo"]; ?>" alt="<?php echo $produit2["nom"]; ?>" class="img-fluid">
                         <h2 class="font_hotel"><?php echo $produit2["nom"]; ?></h2>
                     </a>
                     <p><?php echo $produit2["prix"]; ?> €</p>

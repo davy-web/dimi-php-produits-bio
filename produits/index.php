@@ -85,7 +85,7 @@ function find_davy($str1, $str2) {
                 
                 <div class="col-lg-4 text-center my-5">
                     <a title="Voir Produit" href="../produit/index.php?id=<?php echo $produit3["id"]; ?>" class="color_black">
-                        <img src="<?php echo $produit3["photo"]; ?>" alt="<?php echo $produit3["nom"]; ?>" class="img-fluid rounded-circle">
+                        <img src="<?php echo $produit3["photo"]; ?>" alt="<?php echo $produit3["nom"]; ?>" class="img-fluid">
                         <h2 class="font_hotel"><?php echo $produit3["nom"]; ?></h2>
                     </a>
                     <p><?php echo $produit3["prix"]; ?> €</p>
@@ -108,7 +108,7 @@ function find_davy($str1, $str2) {
                 
                 <div class="col-lg-4 text-center my-5">
                     <a title="Voir Produit" href="../produit/index.php?id=<?php echo $produit["id"]; ?>" class="color_black">
-                        <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid rounded-circle">
+                        <img src="<?php echo $produit["photo"]; ?>" alt="<?php echo $produit["nom"]; ?>" class="img-fluid">
                         <h2 class="font_hotel"><?php echo $produit["nom"]; ?></h2>
                     </a>
                     <p><?php echo $produit["prix"]; ?> €</p>
@@ -127,7 +127,7 @@ function find_davy($str1, $str2) {
             
             <?php
             for ($i = 1; $i <= $nb_pages; $i++) {
-                echo '<a class="btn bouton_green color_white mx-1 px-3 py-1" href="?page=' . $i . '">' . $i . '</a>';
+                echo '<a title="Voir Page" class="btn bouton_green color_white mx-1 px-3 py-1" href="?page=' . $i . '">' . $i . '</a>';
             }
             ?>
         

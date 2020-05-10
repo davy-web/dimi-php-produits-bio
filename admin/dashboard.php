@@ -18,37 +18,111 @@ $result5 = $pdo->query("SELECT * FROM davy_dashboard");
 $nb_visit = $result5->fetch(PDO::FETCH_ASSOC);
 ?>
 
-                    <div class="container my-5">
+                    <div class="container py-5">
                         <div class="row">
-                            <div class="col-lg-5 bg_grey py-5 rounded text-center">
-                                <p>Nombre de produits</p>
-                                <p class="size_l"><?php echo $nb_total_produits; ?></p>
+                            
+                            <!-- Nombre de produits -->
+                            <div class="col-lg">
+                                <div class="row haut_vert_1 text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold color_white size_m">NOMBRE</span><br>
+                                        <span class="w-100 color_white">de produits</span>
+                                    </div>
+                                </div>
+                                <div class="row milieu_vert text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold size_l"><?php echo $nb_total_produits; ?></span><br>
+                                        <span class="w-100">Produits</span>
+                                    </div>
+                                </div>
+                                <div class="row bas_vert"></div>
                             </div>
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-5 bg_grey py-5 rounded text-center">
-                                <p>Nombre de messages</p>
-                                <p class="size_l"><?php echo $nb_total_messages; ?></p>
+                            
+                            <!-- Nombre de messages -->
+                            <div class="col-lg">
+                                <div class="row haut_vert_2 text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold color_white size_m">NOMBRE</span><br>
+                                        <span class="w-100 color_white">de messages</span>
+                                    </div>
+                                </div>
+                                <div class="row milieu_vert text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold size_l"><?php echo $nb_total_messages; ?></span><br>
+                                        <span class="w-100">Messages</span>
+                                    </div>
+                                </div>
+                                <div class="row bas_vert"></div>
+                            </div>
+                            
+                            <!-- Nombre de visites Accueil -->
+                            <div class="col-lg">
+                                <div class="row haut_vert_3 text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold color_white size_m">PAGE</span><br>
+                                        <span class="w-100 color_white">d'Accueil</span>
+                                    </div>
+                                </div>
+                                <div class="row milieu_vert text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold size_l"><?php echo $nb_visit['page_accueil']; ?></span><br>
+                                        <span class="w-100">Visites</span>
+                                    </div>
+                                </div>
+                                <div class="row bas_vert"></div>
                             </div>
                         </div>
-                        <div class="row rounded bg_grey mt-5 py-5 text-center">
-                            <div class="col-lg-12 pb-5">
-                                <p class="font_hotel size_l color_green">Nombre de visite</p>
+                        <div class="row">
+                            
+                            <!-- Nombre de visites Produits -->
+                            <div class="col-lg">
+                                <div class="row haut_vert_1 text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold color_white size_m">PAGE</span><br>
+                                        <span class="w-100 color_white">de Produits</span>
+                                    </div>
+                                </div>
+                                <div class="row milieu_vert text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold size_l"><?php echo $nb_visit['page_produits']; ?></span><br>
+                                        <span class="w-100">Visites</span>
+                                    </div>
+                                </div>
+                                <div class="row bas_vert"></div>
                             </div>
-                            <div class="col-lg text-center">
-                                <p>Page Accueil</p>
-                                <p class="size_l"><?php echo $nb_visit['page_accueil']; ?></p>
+                            
+                            <!-- Nombre de visites Contact -->
+                            <div class="col-lg">
+                                <div class="row haut_vert_2 text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold color_white size_m">PAGE</span><br>
+                                        <span class="w-100 color_white">de Contact</span>
+                                    </div>
+                                </div>
+                                <div class="row milieu_vert text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold size_l"><?php echo $nb_visit['page_contact']; ?></span><br>
+                                        <span class="w-100">Visites</span>
+                                    </div>
+                                </div>
+                                <div class="row bas_vert"></div>
                             </div>
-                            <div class="col-lg text-center">
-                                <p>Page Produits</p>
-                                <p class="size_l"><?php echo $nb_visit['page_produits']; ?></p>
-                            </div>
-                            <div class="col-lg text-center">
-                                <p>Page Contact</p>
-                                <p class="size_l"><?php echo $nb_visit['page_contact']; ?></p>
-                            </div>
-                            <div class="col-lg text-center">
-                                <p>Page Nos valeurs</p>
-                                <p class="size_l"><?php echo $nb_visit['page_valeurs']; ?></p>
+                            
+                            <!-- Nombre de visites Valeurs -->
+                            <div class="col-lg">
+                                <div class="row haut_vert_3 text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold color_white size_m">PAGE</span><br>
+                                        <span class="w-100 color_white">Nos valeurs</span>
+                                    </div>
+                                </div>
+                                <div class="row milieu_vert text-center d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="w-100 font-weight-bold size_l"><?php echo $nb_visit['page_valeurs']; ?></span><br>
+                                        <span class="w-100">Visites</span>
+                                    </div>
+                                </div>
+                                <div class="row bas_vert"></div>
                             </div>
                         </div>
                     </div>
