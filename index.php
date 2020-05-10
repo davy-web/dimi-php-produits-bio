@@ -4,6 +4,9 @@ $title_page = "Accueil - Produits Bio";
 $title_header = "Produits frais bio";
 $chemin_page = "./";
 include 'header.php';
+
+// Compte visite
+nb_visit('page_accueil', $pdo);
 ?>
 
         <!-- Meilleures Ventes -->

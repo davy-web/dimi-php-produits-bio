@@ -9,7 +9,6 @@ include 'header-admin.php';
 if (isset($_SESSION['connect'])) {
     if ($_SESSION['connect'] == "connect") {
         include 'dashboard.php';
-        include 'list-produits.php';
     }
 }
 ?>

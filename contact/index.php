@@ -1,8 +1,12 @@
 <?php
+include '../config.php';
 $title_page = "Contact - Produits Bio";
 $title_header = "Contact";
 $chemin_page = "../";
 include '../header2.php';
+
+// Compte visite
+nb_visit('page_contact', $pdo);
 ?>
 
         <!-- Contact -->

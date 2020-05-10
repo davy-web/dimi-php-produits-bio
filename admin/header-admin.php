@@ -55,7 +55,8 @@ else {
                             <img src="<?php echo $chemin_page; ?>../images/logo.svg" height="60" alt="logo">
                         </a>
                     </div><br><br>
-                    <a title="Bouton List" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>.">List produits</a><br>
+                    <a title="Bouton List" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>.">Dashboard</a><br>
+                    <a title="Bouton Ajouter" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>produits">List produits</a><br>
                     <a title="Bouton Ajouter" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>ajouter">Ajouter produits</a><br>
                     <a title="Bouton Modifier" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>valeurs">Modifier Nos valeurs</a><br>
                     <a title="Bouton Galerie" class="btn bouton_admin size_m" href="<?php echo $chemin_page; ?>galerie">Galerie</a><br>

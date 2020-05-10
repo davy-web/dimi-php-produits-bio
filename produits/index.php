@@ -6,6 +6,9 @@ $chemin_page = "../";
 include '../header2.php';
 $error = "";
 
+// Compte visite
+nb_visit('page_produits', $pdo);
+
 // Pagination
 $produit_par_page = 12;
 $result2 = $pdo->query("SELECT count(id) AS total FROM davy_produits");

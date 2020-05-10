@@ -9,6 +9,9 @@ $result->execute(array(
 ));
 $produit = $result->fetch(PDO::FETCH_ASSOC);
 include '../header2.php';
+
+// Compte visite
+nb_visit('page_valeurs', $pdo);
 ?>
 
         <!-- Nos valeurs -->

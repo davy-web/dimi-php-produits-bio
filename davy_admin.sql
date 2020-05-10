@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 09 mai 2020 à 23:43
+-- Généré le :  Dim 10 mai 2020 à 02:34
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -35,6 +35,13 @@ CREATE TABLE `davy_dashboard` (
   `page_contact` int(11) NOT NULL,
   `page_valeurs` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `davy_dashboard`
+--
+
+INSERT INTO `davy_dashboard` (`id`, `page_accueil`, `page_produits`, `page_contact`, `page_valeurs`) VALUES
+(1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -176,7 +183,7 @@ ALTER TABLE `davy_valeurs`
 -- AUTO_INCREMENT pour la table `davy_dashboard`
 --
 ALTER TABLE `davy_dashboard`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `davy_messages`

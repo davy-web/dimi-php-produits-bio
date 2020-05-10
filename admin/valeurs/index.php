@@ -6,7 +6,7 @@ $result = $pdo->prepare('SELECT * FROM davy_valeurs WHERE id = :id');
 $result->execute(array(
     'id' => 1
 ));
-$produit = $result->fetch(PDO::FETCH_ASSOC);
+$contenu = $result->fetch(PDO::FETCH_ASSOC);
 include '../header-admin.php';
 ?>
 

@@ -18,7 +18,7 @@ if (isset($_POST['enregistrer'])) {
                                     
                                     <!-- Editeur WYSIWYG -->
                                     <textarea id="mon_editeur" tabindex="5" rows="9" name="mon_editeur">
-                                        <?php echo $produit['contenu']; ?>
+                                        <?php echo $contenu['contenu']; ?>
                                     
                                     </textarea><br>
                                 </div>

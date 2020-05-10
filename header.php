@@ -1,3 +1,17 @@
+<?php
+// Compte visite
+function nb_visit($page, $pdo) {
+    $result2 = $pdo->query('SELECT * FROM davy_dashboard');
+    $visit = $result2->fetch(PDO::FETCH_ASSOC);
+    $nb_visit = $visit[$page];
+    $prepare = 'UPDATE davy_dashboard SET ' . $page . ' = :' . $page . ' WHERE id = :id';
+    $result3 = $pdo->prepare($prepare);
+    $result3->execute(array(
+        'id' => 1,
+        $page => $nb_visit + 1
+    ));
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -63,4 +77,3 @@
             </div>
             <button onclick="top_scroll()" id="top_button" title="Top"><i class="material-icons">arrow_upward</i></button>
         </header>
-        

@@ -1,7 +1,5 @@
 <?php
 $error = "";
-$chemin_page = "../";
-include '../config.php';
 
 // Supprimer Produits
 if (!empty($_GET['delete'])) {
