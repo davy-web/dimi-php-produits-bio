@@ -115,6 +115,35 @@ nb_visit('page_accueil', $pdo);
             </div>
         </div>
 
+        <!-- Nouveau Produit -->
+        <div class="container mt-5">
+            <h1 class="font_hotel text-center">Nouveau Produit</h1>
+        </div>
+
+        <!-- Highlight -->
+        <div class="container my-5">
+            <div class="row my-5">
+                
+                <?php
+                $result2 = $pdo->query("SELECT * FROM davy_produits ORDER BY id DESC LIMIT 1");
+                while ($produit2 = $result2->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+                
+                <div class="col-lg text-center my-5">
+                    <a title="Voir Produit" href="produit/index.php?id=<?php echo $produit2["id"]; ?>" class="color_black">
+                        <img src="<?php echo $produit2["photo"]; ?>" alt="<?php echo $produit2["nom"]; ?>" class="img-fluid rounded-circle">
+                        <h2 class="font_hotel"><?php echo $produit2["nom"]; ?></h2>
+                    </a>
+                    <p><?php echo $produit2["prix"]; ?> €</p>
+                </div>
+                
+                <?php
+                }
+                ?>
+            
+            </div>
+        </div>
+
         <!-- Davy Chen -->
         <div class="container my-5">
             <p class="text-center">Gallus Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque causas adfore iam sperabatur, non ut mos est principibus, quorum diffusa potestas localibus subinde medetur aerumnis.</p>
