@@ -19,15 +19,35 @@ $nb_visit = $result5->fetch(PDO::FETCH_ASSOC);
 ?>
 
                     <div class="container my-5">
-                        <span>Nombre de produits : <?php echo $nb_total_produits; ?></span>
-                        <br>
-                        <span>Nombre de messages : <?php echo $nb_total_messages; ?> </span>
-                        <br>
-                        <span>Nombre de visite à la page Accueil : <?php echo $nb_visit['page_accueil']; ?> </span>
-                        <br>
-                        <span>Nombre de visite à la page Produits : <?php echo $nb_visit['page_produits']; ?> </span>
-                        <br>
-                        <span>Nombre de visite à la page Contact : <?php echo $nb_visit['page_contact']; ?> </span>
-                        <br>
-                        <span>Nombre de visite à la page Nos valeurs : <?php echo $nb_visit['page_valeurs']; ?> </span>
+                        <div class="row">
+                            <div class="col bg_grey mr-3 py-5 rounded text-center">
+                                <p>Nombre de produits</p>
+                                <p class="size_l"><?php echo $nb_total_produits; ?></p>
+                            </div>
+                            <div class="col bg_grey ml-3 py-5 rounded text-center">
+                                <p>Nombre de messages</p>
+                                <p class="size_l"><?php echo $nb_total_messages; ?></p>
+                            </div>
+                        </div>
+                        <div class="row rounded bg_grey mt-5 py-5 text-center">
+                            <div class="col-12 pb-5">
+                                <p class="font_hotel size_l color_green">Nombre de visite</p>
+                            </div>
+                            <div class="col text-center">
+                                <p>Page Accueil</p>
+                                <p class="size_l"><?php echo $nb_visit['page_accueil']; ?></p>
+                            </div>
+                            <div class="col text-center">
+                                <p>Page Produits</p>
+                                <p class="size_l"><?php echo $nb_visit['page_produits']; ?></p>
+                            </div>
+                            <div class="col text-center">
+                                <p>Page Contact</p>
+                                <p class="size_l"><?php echo $nb_visit['page_contact']; ?></p>
+                            </div>
+                            <div class="col text-center">
+                                <p>Page Nos valeurs</p>
+                                <p class="size_l"><?php echo $nb_visit['page_valeurs']; ?></p>
+                            </div>
+                        </div>
                     </div>
