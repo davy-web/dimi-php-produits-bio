@@ -20,6 +20,11 @@ function nb_visit($page, $pdo) {
         <title><?php echo $title_page; ?></title>
         <meta name="description" content="Produits frais bio, commander maintenant !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:url" content="https://produits-bio.000webhostapp.com" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="<?php echo $title_page; ?>" />
+        <meta property="og:description" content="Produits frais bio, commander maintenant !" />
+        <meta property="og:image" content="<?php echo $chemin_page; ?>images/icon.svg" />
         <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $chemin_page; ?>images/icon.svg">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
